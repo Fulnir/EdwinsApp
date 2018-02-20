@@ -29,3 +29,4 @@ npm-debug.log
 # Elm
 /lib/my_project/web/elm/elm-stuff
 /assets/vendor/main.js
+.DS_Store

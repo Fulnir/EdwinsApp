@@ -1,1 +1,20 @@
 /* This file is for your main application css. */
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+body {
+    background-image: url("<%= static_path(@conn, "/images/nebel_wald.jpg") %>");
+  }
+  
+  /*
+  Das Eckband für die preview
+  */
+  .previewlogo {
+    position: absolute; 
+    top: 0px;  
+    right: 0px;
+   
+    /* height: 50px;
+    width: 100px;*/
+  }

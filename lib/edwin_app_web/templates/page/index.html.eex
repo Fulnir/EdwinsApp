@@ -1,1 +1,26 @@
-<div class="elm-container"></div>
+
+  <center>
+  <div class="card" style="width: 600px;">
+    <div class="card-divider">
+      <h2><%= gettext "Coming Soon" %>!</h2>
+    </div>
+    <img src="<%= static_path(@conn, "/images/nebel_wald.jpg") %>" style= " width:100%; overflow: hidden; background-size: cover; "/>
+   
+  </div>
+      <!--  -->
+      <br>
+      <div class="alert callout alert-warning" role="alert">
+          ⚠️  After connecting to strava, the app loads the summeries of your  activities. This takes one or several minutes. ⚠️ 
+      </div>
+      <br>
+  <!--  -->
+
+  <div class="elm-container"></div>
+
+  </center>
+
+
+<!-- Cookie Bar http://cookie-bar.eu -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/cookie-bar/1/cookiebar-latest.min.js?tracking=1&thirdparty=1&privacyPage=http%3A%2F%2Fwww.edwin-buehler.net%2Fimpressum"></script>
+  
+

@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "deploy": "brunch build --production",
-    "watch": "brunch watch --stdin"
+    "watch": "brunch watch --stdin",
+    "postinstall": "cp -R node_modules/font-awesome/fonts assets"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
