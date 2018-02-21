@@ -56,6 +56,16 @@ In der Datei `mix.exs` folgendes ändern:
 {:distillery, "~> 1.5", warn_missing: false},
 {:edeliver, "~> 1.4"}
 ```
+Und in `\lib\my_app_web\endpoint.ex` ändern
+```bash
+...
+if config[:load_from_system_env] do
+    port = System.get_env("MYAAPP_PORT") || raise "expected the MYAAPP_PORT environment variable to be set"
+    {:ok, Keyword.put(config, :http, [:inet6, port: port])}
+else
+...
+```
+
 Dann `mix deps.get` ausführen.
 
 #### nginx
@@ -121,6 +131,9 @@ Mit folgendem Inhalt:
 
 APP="myapp_app" # name of your release
 
+#INCREMENT-VERSION=patch
+#AUTO_VERSION=commit-count
+
 BUILD_HOST="85.214.128.188" # host where to build the release
 BUILD_USER="edwin" # local user at build host
 BUILD_AT="/home/edwin/tmp/edeliver/$APP/builds" # build directory on build host
@@ -165,7 +178,7 @@ mix edeliver deploy release
 
 Build a release and deploy it to your production hosts:
 ```bash
-mix edeliver build release --branch=master
+mix edeliver build release --branch=master --verbose
 mix edeliver deploy release to production
 mix edeliver start production
 ```
@@ -178,6 +191,36 @@ Tools
 cd /home/edwin/deploy/production/edwin_app/bin
 sh edwin_app help
 ```
+
+
+```bash
+[Unit]
+Description=birgelenapp_phoenix
+After=network.target
+
+[Service]
+User=edwin
+Restart=on-failure
+
+Type=forking
+Environment=HOME=/home/edwin/deploy/production/birgelen_app
+EnvironmentFile=/home/edwin/deploy/production/birgelen_app.env # For environment variables like REPLACE_OS_VARS=true
+ExecStart= /home/edwin/deploy/production/birgelen_app/bin/birgelen_app start
+ExecStop= /home/edwin/deploy/production/birgelen_app/bin/birgelen_app stop
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Wenn die app noch läuft 
+```bash
+cd /home/edwin/deploy/production/birgelen_app/bin
+sh birgelen_app stop
+```
+
+sudo systemctl daemon-reload
+sudo systemctl start birgelenapp.service
+
 
 
 ### Versions
@@ -199,5 +242,12 @@ Increment / Set Version for the current release / upgrade
   # creates version 1.0.0+3027
   # 
   # 
-  mix edeliver build release --increment-version=patch --auto-version=commit-count
+  mix edeliver build release --increment-version=patch--auto-version=commit-count
+```
+
+### booting
+
+```bash
+cd ../../etc/systemd/system
+nano birgelenapp.service
 ```

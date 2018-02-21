@@ -2,6 +2,9 @@
 
 APP="edwin_app" # name of your release
 
+#INCREMENT-VERSION=patch
+#AUTO_VERSION=commit-count
+
 BUILD_HOST="85.214.128.188" # host where to build the release
 BUILD_USER="edwin" # local user at build host
 BUILD_AT="/home/edwin/tmp/edeliver/$APP/builds" # build directory on build host
