@@ -30,3 +30,7 @@ npm-debug.log
 /lib/my_project/web/elm/elm-stuff
 /assets/vendor/main.js
 .DS_Store
+
+# edeliver
+/config/prod.secret.exs
+.deliver/releases/

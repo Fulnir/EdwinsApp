@@ -1,0 +1,33 @@
+# .deliver/config
+
+APP="edwin_app" # name of your release
+
+BUILD_HOST="85.214.128.188" # host where to build the release
+BUILD_USER="edwin" # local user at build host
+BUILD_AT="/home/edwin/tmp/edeliver/$APP/builds" # build directory on build host
+
+
+RELEASE_DIR="/home/edwin/tmp/edeliver/builds/_build/prod/rel/$APP"
+
+# prevent re-installing node modules; this defaults to "."
+GIT_CLEAN_PATHS="_build rel priv/static"
+
+USING_DISTILLERY="true"
+
+STAGING_HOSTS="85.214.128.188"  # staging / test hosts separated by space
+STAGING_USER="edwin" # local user at staging hosts
+TEST_AT="/home/edwin/deploy/staging/$APP" # deploy directory on staging hosts. default is DELIVER_TO
+
+PRODUCTION_HOSTS="85.214.128.188" # deploy / production hosts separated by space
+PRODUCTION_USER="edwin" # local user at deploy hosts
+DELIVER_TO="/home/edwin/deploy/production" # deploy directory on production hosts
+
+# For *Phoenix* projects, symlink prod.secret.exs to our tmp source
+pre_erlang_get_and_update_deps() {
+  local _prod_secret_path="/home/edwin/builder/$APP/prod.secret.exs"
+  if [ "$TARGET_MIX_ENV" = "prod" ]; then
+    __sync_remote "
+      ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
+    "
+  fi
+}
