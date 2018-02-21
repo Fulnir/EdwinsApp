@@ -179,8 +179,9 @@ mix edeliver deploy release
 Build a release and deploy it to your production hosts:
 ```bash
 mix edeliver build release --branch=master --verbose
-mix edeliver deploy release to production
-mix edeliver start production
+mix edeliver deploy release to production --verbose
+mix edeliver start production --verbose
+mix edeliver ping production
 ```
 
 mix edeliver ping production
