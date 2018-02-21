@@ -7,7 +7,7 @@ BUILD_USER="edwin" # local user at build host
 BUILD_AT="/home/edwin/tmp/edeliver/$APP/builds" # build directory on build host
 
 
-RELEASE_DIR="/home/edwin/tmp/edeliver/builds/_build/prod/rel/$APP"
+RELEASE_DIR="/home/edwin/tmp/edeliver/$APP/builds/_build/prod/rel/$APP"
 
 # prevent re-installing node modules; this defaults to "."
 GIT_CLEAN_PATHS="_build rel priv/static"

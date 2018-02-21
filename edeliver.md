@@ -15,7 +15,7 @@ export MYAPP_PORT=8888
 ```
 In **centos**
 ```bash
-nano ~\.bashrc
+nano .bashrc
 ```
 Folgende Änderung:
 ```bash
@@ -126,7 +126,7 @@ BUILD_USER="edwin" # local user at build host
 BUILD_AT="/home/edwin/tmp/edeliver/$APP/builds" # build directory on build host
 
 
-RELEASE_DIR="/home/edwin/tmp/edeliver/builds/_build/prod/rel/$APP"
+RELEASE_DIR="/home/edwin/tmp/edeliver/$APP/builds/_build/prod/rel/$APP"
 
 # prevent re-installing node modules; this defaults to "."
 GIT_CLEAN_PATHS="_build rel priv/static"
@@ -173,3 +173,31 @@ mix edeliver start production
 mix edeliver ping production
 mix edeliver restart production
 
+Tools
+```bash
+cd /home/edwin/deploy/production/edwin_app/bin
+sh edwin_app help
+```
+
+
+### Versions
+Increment / Set Version for the current release / upgrade
+
+
+```bash
+  mix release.version show
+  1.2.3
+  mix edeliver build release --increment-version=patch
+  # creates version 1.2.4
+  mix edeliver build release --increment-version=minor
+  # creates version 1.3.0
+  mix edeliver build release --increment-version=major
+  # creates version 2.0.0
+  mix edeliver build release --set-version=1.3.0-beta.1
+  # creates version 1.3.0-beta.1
+  mix edeliver build release --auto-version=commit-count
+  # creates version 1.0.0+3027
+  # 
+  # 
+  mix edeliver build release --increment-version=patch --auto-version=commit-count
+```
