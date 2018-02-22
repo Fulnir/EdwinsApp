@@ -36,7 +36,7 @@ defmodule EdwinAppWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_edwin_app_key",
-    signing_salt: "WsSu1uow"
+    signing_salt: "LMHIw6hn"
 
   plug EdwinAppWeb.Router
 
