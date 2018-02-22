@@ -178,9 +178,10 @@ mix edeliver deploy release
 
 Build a release and deploy it to your production hosts:
 ```bash
-mix edeliver build release --branch=master --verbose
-mix edeliver deploy release to production --verbose
-mix edeliver start production --verbose
+mix edeliver build release --branch=master #--verbose
+mix edeliver stop production
+mix edeliver deploy release to production #--verbose
+mix edeliver start production #--verbose
 mix edeliver ping production
 ```
 
@@ -201,11 +202,12 @@ After=network.target
 
 [Service]
 User=edwin
+Environment="MYAPP_PORT=8888"
 Restart=on-failure
 
 Type=forking
 Environment=HOME=/home/edwin/deploy/production/birgelen_app
-EnvironmentFile=/home/edwin/deploy/production/birgelen_app.env # For environment variables like REPLACE_OS_VARS=true
+# EnvironmentFile=/home/edwin/deploy/production/birgelen_app.env # For environment variables like REPLACE_OS_VARS=true
 ExecStart= /home/edwin/deploy/production/birgelen_app/bin/birgelen_app start
 ExecStop= /home/edwin/deploy/production/birgelen_app/bin/birgelen_app stop
 
@@ -220,9 +222,12 @@ sh birgelen_app stop
 ```
 
 sudo systemctl daemon-reload
+sudo systemctl enable birgelenapp.service
 sudo systemctl start birgelenapp.service
-
-
+sudo systemctl enable edwinapp.service
+sudo systemctl start edwinapp.service
+sudo systemctl enable codexapp.service
+sudo systemctl start codexapp.service
 
 ### Versions
 Increment / Set Version for the current release / upgrade
@@ -250,5 +255,5 @@ Increment / Set Version for the current release / upgrade
 
 ```bash
 cd ../../etc/systemd/system
-nano birgelenapp.service
+sudo nano birgelenapp.service
 ```

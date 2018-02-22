@@ -4,6 +4,11 @@
 /deps
 /*.ez
 
+# Distribution
+build/
+_build/
+deps
+
 # Generated on crash by the VM
 erl_crash.dump
 
@@ -27,7 +32,8 @@ npm-debug.log
 /config/*.secret.exs
 
 # Elm
-/lib/my_project/web/elm/elm-stuff
+/assets/elm-stuff
+/assets/js/main.js
 /assets/vendor/main.js
 .DS_Store
 
