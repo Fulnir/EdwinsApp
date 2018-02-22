@@ -5,7 +5,7 @@
 
 body {
     background-image: url("<%= static_path(@conn, "/images/nebel_wald.jpg") %>");
-  }
+}
   
   /*
   Das Eckband für die preview
