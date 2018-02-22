@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!-- EdwinApp Alerts Section -->
+=======
+<!-- Esta4 Alerts Section -->
+>>>>>>> wieder mit elm
 <div class="row alerts">
   <%= if flash = get_flash(@conn, :info) do %>
     <div class="success callout alert-info" role="alert">
