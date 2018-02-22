@@ -4,8 +4,8 @@ defmodule EdwinApp.Mixfile do
   def project do
     [
       app: :edwin_app,
-      version: "0.0.1",
-      elixir: "~> 1.4",
+      version: "0.0.2",
+      elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
