@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="small-6 large-2 columns"><!-- ... --></div>
+  <div class="small-6 large-8 columns">
+
+<h1>Imprint</h1>
+  
+  <div class="card" style="width: 300px;">
+  <div class="card-divider">
+    <h2><i class="fa fa-address-card-o" aria-hidden="true"></i> Address</h2>
+  </div>
+  <img src="<%= static_path(@conn, "/images/holzbohlenweg.jpg") %>" style= "height: 100px; width:100%; overflow: hidden; background-size: cover; "/>
+  <div class="card-section">
+    <address>
+    <strong>
+		<i class="fa fa-male" aria-hidden="true"></i> Dipl.-Ing. Edwin Bühler
+	 </strong>
+   <br>
+   <i class="fa fa-home" aria-hidden="true"></i> Op de Berg 27<br>
+   <i class="fa fa-map-marker" aria-hidden="true"></i> 41849 Wassenberg<br>
+   <i class="fa fa-globe" aria-hidden="true"></i> Germany<br>
+	 <i class="fa fa-phone" aria-hidden="true"></i>
+  				 <abbr title="Phone"></abbr> (++49) 2432 4122
+  </address>
+	<br>
+    <img src="<%= static_path(@conn, "/images/eposticon.png") %>" height=30px  altText="fulnir_ReplaceWithAtCharacter_gmail.com"/>
+    <br>
+	USt.-IdNr.: DE210865160
+  </div>
+</div>
+
+  
+
+	
+    <br>
+    <a style="display:inline-block;background-color:#FC4C02;color:#fff;padding:5px 10px 5px 30px;font-size:11px;font-family:Helvetica, Arial, sans-serif;white-space:nowrap;text-decoration:none;background-repeat:no-repeat;background-position:10px center;border-radius:3px;background-image:url("http://badges.strava.com/logo-strava-echelon.png")" href="http://strava.com/athletes/4544353/badge" target="_clean">
+  Folge mir auf
+  <img src="http://badges.strava.com/logo-strava.png" alt="Strava" style="margin-left:2px;vertical-align:text-bottom" height=13 width=51 />
+</a>
+<br>
+
+  </div>
+  <div class="small-12 large-2 columns"><!-- ... --></div>
+</div>
+
+<div class="row">
+  <div class="small-6 large-2 columns"><!-- ... --></div>
+  <div class="small-6 large-8 columns">
+
+ <br>
+ <br>
+  <div class="card" style="width: 800px;">
+  <div class="card-divider">
+    <h2>Terms of Service</h2>
+  </div>
+  <div class="card-section">
+    Wenn Sie die Webseiten von Esta4 (.. und alle anderen Tochterseiten) nutzen, erkennen Sie die folgenden Nutzungsbedingungen an. Falls Sie mit diesen nicht einverstanden sind, benutzen Sie diese Website bitte nicht. Diese Website wurde von der Firma Edwin Bühler (im folgenden Edwin Bühler oder Esta4) entwickelt und administriert. Wir behalten uns das Recht vor, unsere Website, die allgemeinen Nutzungsbedingungen sowie unsere allgemeinen Geschäftsbedingungen nach eigenem Ermessen jederzeit ohne Ankündigung ganz oder teilweise zu ändern und/oder deren Betrieb einzustellen.
+<br>
+ Esta4 hat die Informationen, die Sie auf dieser Website vorfinden, aus internen und externen Quellen nach bestem Wissen und Gewissen mit professioneller Sorgfalt zusammengestellt. Wir bemühen uns, dieses Informationsangebot stetig zu erweitern und zu aktualisieren. Wir übernehmen jedoch keine Garantie - weder ausdrücklich noch stillschweigend - für die Vollständigkeit oder Richtigkeit der Informationen auf dieser Website. Wir haften weder für den Velust von Daten oder von dadurch entstandenen Schäden.
+<br>
+ Der Nutzer der Website ist in vollem Umfang für alle Informationen, die er an Esta4 sendet, hinsichtlich Inhalt und Richtigkeit sowie dafür verantwortlich, dass Rechte Dritter nicht verletzt werden. Der Nutzer ist damit einverstanden, dass Esta4 diese Informationen speichert und für statistische Auswertungen oder andere benannte, geschäftliche Zwecke verwendet, sofern es sich nicht um personenbezogene Daten handelt, die über Bestandsdaten oder Nutzungsdaten im Sinne von § 5 und § 6 des Teledienstedatenschutzgesetz (TDDSG) hinausgehen. Esta4 ist insbesondere befugt, den Inhalt solcher Eingaben, einschließlich Ideen, Erfindungen, Konzepte, Techniken oder Know How, das darin enthalten ist, für jeden Zweck zu nutzen, einschließlich der Entwicklung, Herstellung und/oder Vermarktung von Produkten oder Services, und diese Information zu reproduzieren und uneingeschränkt dritten Parteien zugänglich zu machen.
+<br>
+ Sie sind verpflichtet, die Zugangsberechtigung vor unberechtigtem Zugriff Dritter zu schützen und sicherzustellen, dass sie von anderen Personen nicht ohne Ihre Ermächtigung genutzt wird. Sie haben Esta4 unverzüglich zu unterrichten, wenn Sie Kenntnis von einer Verletzung der Sicherheit irgendwelcher auf der Esta4 Website gespeicherter Informationen oder unberechtigter Benutzung seiner Zugangsdaten erhalten oder Anhaltspunkte dafür haben, dass solche Vorkommnisse möglich sind.
+<br>
+ Jegliche in Verbindung mit der Website oder deren Benutzung auftretenden Rechtsansprüche oder Prozesse unterliegen der Auslegung der Gesetze der Bundesrepublik Deutschland.
+<br>
+ Der Nutzer der Website ist in vollem Umfang für alle Daten, Texte und Informationen, Links sowie weitere Inhalte (nachfolgend Inhalte), die er in öffentlichen oder eingeschränkt zugänglichen Bereichen eingibt, selbst verantwortlich. Dies bedeutet, dass Sie und nicht Esta4 für alle Inhalte, die Sie über den Service veröffentlichen, posten, hochladen, versenden, verbreiten oder anderweitig übertragen (nachfolgend 'posten'), die ausschließliche Verantwortung tragen. Esta4 übernimmt keine Gewähr für diese Inhalte, einschließlich deren Richtigkeit, Vollständigkeit oder Nützlichkeit und haftet nicht für etwaige Verluste oder Schäden, die aus der Verwendung eines über den Service geposteten Inhalts entstehen. Der Service einschließlich der Inhalte kann über verschiedene Netzwerke verarbeitet oder übertragen und an technische Anforderungen verbundener Netzwerke oder Geräte angepasst werden.
+
+  </div>
+</div>
+
+<br>
+<br>
+Designed for use with Withings
+<br>
+Withings is a registered trademark and service mark of Withings, Inc. Esta4 is
+designed for use with the Withings
+platform. This product is not put out by Withings, and Withings does not service
+or warrant the functionality of this product.'.
+
+  </div>
+  <div class="small-12 large-2 columns"><!-- ... --></div>
+</div>
