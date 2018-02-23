@@ -8,7 +8,7 @@ use Mix.Config
 # Configures the endpoint
 config :edwin_app, EdwinAppWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "UIz787kDnKB0/SlBZVI76/sp89dkGerzru+buYpUeRSAYulG5HyZRtp2qNknHVby",
+  secret_key_base: "VU87DucmZR3Ft+796ln2x4recFlKZVB+UKUjiEDQ1mrv8mdfaOpiksoex0DR2TL8",
   render_errors: [view: EdwinAppWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: EdwinApp.PubSub,
            adapter: Phoenix.PubSub.PG2]
