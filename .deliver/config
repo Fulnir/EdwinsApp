@@ -13,7 +13,7 @@ BUILD_AT="/home/edwin/tmp/edeliver/$APP/builds" # build directory on build host
 RELEASE_DIR="/home/edwin/tmp/edeliver/$APP/builds/_build/prod/rel/$APP"
 
 # prevent re-installing node modules; this defaults to "."
-GIT_CLEAN_PATHS="_build rel priv/static"
+# GIT_CLEAN_PATHS="_build rel priv/static"
 
 USING_DISTILLERY="true"
 
@@ -33,4 +33,24 @@ pre_erlang_get_and_update_deps() {
       ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
     "
   fi
+}
+
+
+pre_erlang_clean_compile() {
+  status "Running phoenix.digest" # log output prepended with "----->"
+  __sync_remote " # runs the commands on the build host
+    # [ -f ~/.profile ] && source ~/.profile # load profile (optional)
+    source ~/.profile
+    # echo \$PATH # check if rbenv is in the path
+    set -e # fail if any command fails (recommended)
+    cd '$BUILD_AT' # enter the build directory on the build host (required)
+    # prepare something
+    mkdir -p priv/static # required by the phoenix.digest task
+    npm install 
+
+    ./node_modules/brunch/bin/brunch build --production 
+
+    # run your custom task
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
+  "
 }

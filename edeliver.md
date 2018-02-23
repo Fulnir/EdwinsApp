@@ -180,7 +180,6 @@ Build a release and deploy it to your production hosts:
 ```bash
 mix edeliver build release --branch=master #--verbose
 mix edeliver stop production
-mix edeliver build release --branch=master
 mix edeliver deploy release to production #--verbose
 mix edeliver start production #--verbose
 mix edeliver ping production
