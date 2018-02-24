@@ -4,6 +4,12 @@
 
 ## Vorbereitung
 
+Ein Project erzeugen mit:
+
+```bash
+mix phx.new --no-ecto meine_app --module MeineApp
+```
+
 ### Auf dem Server
 
 Environment Variable `PORT` im Terminal setzten.
