@@ -2,7 +2,7 @@
 
 APP="edwin_app" # name of your release
 
-#INCREMENT-VERSION=patch
+INCREMENT-VERSION=patch
 AUTO_VERSION=commit-count
 
 BUILD_HOST="85.214.128.188" # host where to build the release
@@ -35,7 +35,6 @@ pre_erlang_get_and_update_deps() {
   fi
 }
 
-
 pre_erlang_clean_compile() {
   status "Running phx.digest" # log output prepended with "----->"
   __sync_remote " # runs the commands on the build host
@@ -48,7 +47,13 @@ pre_erlang_clean_compile() {
     echo 'prepare something'
     mkdir -p priv/static # required by the phx.digest task
     cd '$BUILD_AT/assets'
+    node -v
     echo 'npm install'
+    # If npm: command not found
+    # whereis node
+    # sudo ln -s /usr/bin/node-v7.3.0-linux-x64/bin/node /usr/bin/node
+    # sudo ln -s /usr/lib/node-v7.3.0-linux-x64/bin/node /usr/lib/node
+    # sudo ln -s /usr/bin/node-v7.3.0-linux-x64/bin/npm /usr/bin/npm
     npm install
     echo './node_modules/brunch/bin/brunch build --production'
     ./node_modules/brunch/bin/brunch build --production 
