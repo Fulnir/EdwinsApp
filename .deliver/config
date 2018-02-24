@@ -45,12 +45,14 @@ pre_erlang_clean_compile() {
     set -e # fail if any command fails (recommended)
     cd '$BUILD_AT' # enter the build directory on the build host (required)
     # prepare something 
+    echo 'prepare something'
     mkdir -p priv/static # required by the phx.digest task
     cd '$BUILD_AT/assets'
-    npm install 
-    cd '$BUILD_AT'
+    echo 'npm install'
+    npm install
+    echo './node_modules/brunch/bin/brunch build --production'
     ./node_modules/brunch/bin/brunch build --production 
-
+    cd '$BUILD_AT'
     # run your custom task
     APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
   "
