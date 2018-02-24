@@ -37,17 +37,18 @@ pre_erlang_get_and_update_deps() {
 
 
 pre_erlang_clean_compile() {
-  status "Running phoenix.digest" # log output prepended with "----->"
+  status "Running phx.digest" # log output prepended with "----->"
   __sync_remote " # runs the commands on the build host
     # [ -f ~/.profile ] && source ~/.profile # load profile (optional)
     source ~/.profile
     # echo \$PATH # check if rbenv is in the path
     set -e # fail if any command fails (recommended)
     cd '$BUILD_AT' # enter the build directory on the build host (required)
-    # prepare something
+    # prepare something 
     mkdir -p priv/static # required by the phx.digest task
+    cd '$BUILD_AT/assets'
     npm install 
-
+    cd '$BUILD_AT'
     ./node_modules/brunch/bin/brunch build --production 
 
     # run your custom task
