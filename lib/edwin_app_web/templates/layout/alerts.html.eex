@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- EdwinApp Alerts Section -->
 =======
 <!-- Esta4 Alerts Section -->
 >>>>>>> wieder mit elm
+=======
+<!-- EdwinApp Alerts Section -->
+>>>>>>> falscher commit
 <div class="row alerts">
   <%= if flash = get_flash(@conn, :info) do %>
     <div class="success callout alert-info" role="alert">
