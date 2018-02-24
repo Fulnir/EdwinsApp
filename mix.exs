@@ -5,12 +5,6 @@ defmodule EdwinApp.Mixfile do
     [
       app: :edwin_app,
       version: "0.0.4",
-<<<<<<< HEAD
-=======
-      version: "0.0.3",
->>>>>>> wieder mit ignore
-=======
->>>>>>> falscher commit
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
