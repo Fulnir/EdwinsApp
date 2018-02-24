@@ -45,7 +45,7 @@ pre_erlang_clean_compile() {
     set -e # fail if any command fails (recommended)
     cd '$BUILD_AT' # enter the build directory on the build host (required)
     # prepare something
-    mkdir -p priv/static # required by the phoenix.digest task
+    mkdir -p priv/static # required by the phx.digest task
     npm install 
 
     ./node_modules/brunch/bin/brunch build --production 
