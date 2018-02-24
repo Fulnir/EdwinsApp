@@ -4,11 +4,7 @@ defmodule EdwinApp.Mixfile do
   def project do
     [
       app: :edwin_app,
-<<<<<<< HEAD
       version: "0.0.4",
-=======
-      version: "0.0.3",
->>>>>>> deliver config
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
@@ -44,6 +40,10 @@ defmodule EdwinApp.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
+      {:prometheus_ex, "~> 1.0"},
+      {:prometheus_phoenix, "~> 1.0"},
+      {:prometheus_plugs, "~> 1.0"},
+      {:prometheus_process_collector, "~> 1.0"},
       {:distillery, "~> 1.5", warn_missing: false},
       {:edeliver, "~> 1.4"}
     ]

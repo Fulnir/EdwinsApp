@@ -191,7 +191,15 @@ mix edeliver start production #--verbose
 mix edeliver ping production
 ```
 
+Upgrade
+
+```bash
+# --increment-version=ppatch
+# --verbose 
+mix edeliver upgrade production --clean-deploy --force --start-deploy
 mix edeliver ping production
+```
+
 mix edeliver restart production
 
 Tools

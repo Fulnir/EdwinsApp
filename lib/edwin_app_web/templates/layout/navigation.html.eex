@@ -1,17 +1,19 @@
 <!-- Navigation-Bar Section -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
-  <img src="<%= static_path(@conn, "/images/logo_c.png") %>" width="30" height="30" class="d-inline-block align-top" alt="">  Edwin Bühler</a>
+  <img src="<%= static_path(@conn, "/images/logo.png") %>" width="25" height="30" class="d-inline-block align-top" alt="">  Edwin Bühler</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/"><i class="fa fa-home">Start</i></a>
-      <a class="nav-item nav-link" href="impressum"><i class="fa fa-info"></i>Impressum</a>
-      <a class="nav-item" >&nbsp; &nbsp; &nbsp; &nbsp; © 2018 by Edwin Bühler</a>
+      <a class="nav-item nav-link active" href="/"><i class="fas fa-home"></i> Start</a>
+      <a class="nav-item nav-link" href="impressum"><i class="fa fa-info"></i> Impressum</a>
       <a class="nav-item" href="#"><img src="<%= static_path(@conn, "/images/eckband_earlypreview.png") %>" class="previewlogo"/></a>
     </div>
   </div>
+  <span class="nav-item navbar-text">
+      <i class="fas fa-copyright"></i> 2018 by Edwin Bühler
+    </span>
 </nav>
 

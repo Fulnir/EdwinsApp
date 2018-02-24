@@ -2,7 +2,7 @@
   <center>
   <div class="card" style="width: 600px;">
     <div class="card-divider">
-      <h2><%= gettext "Coming Soon" %>!</h2>
+      <h2><%= gettext "Demnächst hier" %>!</h2>
     </div>
     <img src="<%= static_path(@conn, "/images/nebel_wald.jpg") %>" style= " width:100%; overflow: hidden; background-size: cover; "/>
    
@@ -10,7 +10,7 @@
       <!--  -->
       <br>
       <div class="alert callout alert-warning" role="alert">
-          ⚠️  After connecting to strava, the app loads the summeries of your  activities. This takes one or several minutes. ⚠️ 
+          ⚠️  Sandbox für Elixir und Elm ⚠️ 
       </div>
       <br>
   <!--  -->
