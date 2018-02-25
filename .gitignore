@@ -40,3 +40,4 @@ npm-debug.log
 # edeliver
 /config/prod.secret.exs
 .deliver/releases/
+/.elixir_ls

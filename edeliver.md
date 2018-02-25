@@ -49,6 +49,7 @@ Danach in `.gitignore` ergänzen
 
 In der config `\config\prod.exs` den Inhalt zu folgendem ändern:
 
+85.214.128.188
 ```elixir
 url: [host: "MY_SERVER_IP", port: {:system, "MYAPP_PORT"}],
 server: true,
@@ -66,7 +67,7 @@ Und in `\lib\my_app_web\endpoint.ex` ändern
 ```bash
 ...
 if config[:load_from_system_env] do
-    port = System.get_env("MYAAPP_PORT") || raise "expected the MYAAPP_PORT environment variable to be set"
+    port = System.get_env("MYAPP_PORT") || raise "expected the MYAPP_PORT environment variable to be set"
     {:ok, Keyword.put(config, :http, [:inet6, port: port])}
 else
 ...
